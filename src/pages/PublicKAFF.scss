@@ -1,0 +1,202 @@
+div {
+    margin: 20px auto;
+    max-width: 100vw;
+    color: white;
+    text-align: center;
+}
+
+#header-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+    &:after {
+        content: '';
+        background-image: url('/thin_wave.svg');
+		background-size: 3000px 62px;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        transform: rotate(180deg);
+        bottom: 0px;
+        width: 100%;
+        height: 62px
+    }
+
+    p {
+        max-width: 600px;
+        margin: 0;
+        line-height: 30px;
+    }
+
+    h2 {
+        margin: 5px 0 80px 0;
+        font-weight: 400;
+        // These values are to be changed via AnimeJS
+        position: relative;
+        top: -10px;
+        opacity: 0;
+    }
+}
+
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+
+    & > div {
+        margin: 0;
+        flex-basis: 11%;
+        align-self: stretch;
+        display: flex;
+        z-index: 5;
+    }
+}
+
+.devs-container {
+    background: #292929;
+    padding: 100px 0 5px 0;
+    position: relative;
+    
+    &:before {
+        content: '';
+        background-image: url('/bump_wave.svg');
+		background-size: 3000px 140px;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        top: -130px;
+        width: 100%;
+        height: 140px;
+    }
+
+    &:after {
+        content: '';
+        background-image: url('/bump_wave.svg');
+		background-size: 3000px 140px;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        transform: rotate(180deg);
+        bottom: -130px;
+        width: 100%;
+        height: 140px;
+        z-index: 1;
+    }
+
+    .dev-leads {
+        justify-content: center;
+    }
+
+    .dep-leads {
+        color: var(--primary-color);
+    }
+}
+
+
+.empty-box {
+    height: 700px;
+}
+
+.boreal-alyph {
+    max-width: 1000px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    position: relative;
+    max-width: 1000px;
+    padding-bottom: 50px;
+
+    * {
+        z-index: 3;
+    }
+
+    img {
+        height: 400px;
+        width: 400px;
+        position: relative;
+        top: -50px; right: -100px;
+        transition: .5s;
+
+        animation: rotate-in .5s;
+        animation-timing-function: cubic-bezier(.31,.85,.3,1.01);
+        @keyframes rotate-in {
+            0% {
+                transform: scale(.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        &:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+    }
+
+    > div {
+        text-align: left;
+
+        .typing {
+            display: inline-block;
+            margin: 20px 0 0 0;
+        }
+
+        a.button {
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
+.stats-container {
+    background: linear-gradient(#222, #1a1a1a);
+    padding: 50px 0;
+
+    .stats {
+        display: grid;
+        max-width: 1000px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 40px;
+        padding: 0 20px;
+        
+        > div {
+            line-height: 1.6em;
+            
+            i {
+                color: var(--primary-color);
+                font-size: 6em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px)  {
+    .boreal-alyph {
+        grid-template-columns: 1fr;
+        padding: 40px;
+        > *:last-child {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px)  {
+    #header-container {
+        padding: 20px;
+    }
+    .stats-container .stats {
+        padding: 0 50px;
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}

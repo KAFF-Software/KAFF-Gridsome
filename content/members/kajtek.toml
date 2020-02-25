@@ -1,0 +1,13 @@
+name = "Kajetan Krawczyk"
+
+nickname = "Kajtek"
+
+position = "Dev"
+
+img = "kajtek.jpg"
+
+bio = "Whatever he lacks in communication skills he makes up for by screaming all the time. <br/><br/>Just here for the free beer."
+
+[[links]]
+name = "Steam"
+url = "https://steamcommunity.com/id/kaitek666/"

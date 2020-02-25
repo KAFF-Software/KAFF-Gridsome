@@ -1,0 +1,202 @@
+.header-section {
+    height: 1000px;
+    text-align: center;
+    height: 600px;
+    background-image: linear-gradient(#0005, #0002), url('/bg.jpg');
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-weight: 400;
+            max-width: 450px;
+            margin: 0 auto;
+            display: inline-block;
+
+            // values to be edited by animeJS
+            position: relative;
+            top: -20px;
+            opacity: 0;
+        }
+    }
+
+}
+
+.news {
+    padding: 80px 0;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    // border: 1px solid white;
+
+    animation: fade-in 1s;
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            max-height: 0px;
+            padding: 0;
+        }
+        to {
+            opacity: 1;
+            max-height: 600px;
+            padding: 80px 0;
+        }
+    }
+
+    .typing {
+        margin: 0 auto 25px auto;
+    }
+
+    .article-boxes {
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        perspective: 800px;
+
+        .article-box {
+            height: 350px;
+            width: 350px;
+            background: #111111;
+            color: white;
+            border-bottom: solid 20px var(--primary-color);
+            box-sizing: border-box;
+            margin-right: -200px;
+            &:last-child { margin-right: -100px;}
+            box-shadow: -10px 10px 30px #0004;
+            transition: .5s;
+
+            position: relative;
+            left: -40px;
+
+            z-index: 1;
+            transform: rotateY(20deg) scale(.8);
+
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+
+            &:hover {
+                border-bottom-width: 30px;
+                transform: rotateY(0deg) translateZ(1em);
+                transition: .25s;
+                box-shadow: -10px 10px 40px #000a;
+                margin-right: -20px;
+            }
+
+            .bg-img {
+                background-image: url('/bg.jpg');
+                transition: .25s;
+                background-size: 100%;
+                background-position: 50% 50%;
+            }
+            &:hover .bg-img {
+                background-size: 130%;
+            }
+            .text {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            h3, p, .article-footer {
+                padding: 0 20px;
+                text-align: center;
+            }
+
+            h3 {
+                letter-spacing: .15em;
+                transition: .25s;
+            }
+            &:hover h3 {
+                color: var(--primary-color);
+            }
+
+            .article-footer {
+                display: flex;
+                justify-content: space-between;
+
+                h4 {
+                    margin: 0;
+                    font-weight: 400;
+                    font-size: .9em;
+                    color: #aaa;
+                }
+
+                .name {
+                    color: var(--primary-color);
+                }
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+.container {
+    padding: 80px 0;
+
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #2a2a2a;
+    margin-bottom: 60px;
+    box-shadow: 0px 10px 40px #0009;
+
+    > div {
+        text-align: center;
+        max-width: 900px;
+        line-height: 2em;
+        margin: 0 auto;
+    }
+
+    &.join {
+        box-shadow: none;
+        background: linear-gradient(#0000, #2a2a2a);
+        padding-bottom: 100px;
+        padding-top: 30px;
+        max-width: none;
+    }
+}
+
+@media only screen and (max-width: 1200px)  {
+    .container {
+        padding: 30px;
+    }
+    .join {
+        padding: 80px 40px;
+    }
+}
+
+@media only screen and (max-width: 850px)  {
+    .header-section {
+        height: 400px;
+        .logo-container {
+            padding-top: 100px;
+        }
+        h1 {
+            padding-top: 100px;
+            font-size: 1.7em;
+            padding: 20px 60px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px)  {
+    .header-section {
+        .logo-container {
+            padding-top: 100px;
+        }
+        height: 300px;
+        h1 {
+            font-size: 1.3em;
+        }
+    }
+}

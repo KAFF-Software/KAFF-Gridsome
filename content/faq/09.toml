@@ -1,0 +1,3 @@
+question = "Will Boreal Alyph release on Linux or macOS?"
+
+answer = "Windows is our main focus, a release for Linux and macOS is less likely due to the outdated graphics API Source is using on those platforms."

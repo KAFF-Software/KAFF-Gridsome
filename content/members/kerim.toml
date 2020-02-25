@@ -1,0 +1,17 @@
+name = "Kerim Čamdžić"
+
+nickname = "Nbc66"
+
+position = "Face Posing"
+
+img = "kerim.jpg"
+
+bio = "A creature from Bosnia who likes to drink water and stare directly at the sun.<br/><br/>(We still dont know what he is)"
+
+[[links]]
+name = "Twitter"
+url = "https://twitter.com/_RealBigSmoke"
+
+[[links]]
+name = "Steam"
+url = "https://steamcommunity.com/id/nbc66/"

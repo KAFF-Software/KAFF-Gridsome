@@ -1,0 +1,21 @@
+name = "Niker Niker"
+
+nickname = "Niker107"
+
+position = "Dev"
+
+img = "niker.png"
+
+bio = "As a result of a mix between a Polynesian Tattoo and the word \"obsfucate,\" Niker is a complex man, but an asset to the team nevertheless."
+
+[[links]]
+name = "YouTube"
+url = "https://www.youtube.com/channel/UCwvx8f3BuTQtdat21xZWEpA"
+
+[[links]]
+name = "Twitter"
+url = "https://twitter.com/Niker107"
+
+[[links]]
+name = "Steam"
+url = "https://steamcommunity.com/id/Niker107/"

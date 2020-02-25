@@ -1,0 +1,25 @@
+name = "Luna Zaremba"
+
+nickname = "Ryuko"
+
+position = "Programming"
+
+img = "luna.jpg"
+
+bio = "A Polish girl with an unhealthy love for CoD (especially the Extinction mode from Ghosts). Does a fair bit of gameplay, graphics and tool programming. Just wants to make a game she would love to play. Oh, and she also makes music for some reason."
+
+[[links]]
+name = "Website"
+url = "https://lunaryuko.space/"
+
+[[links]]
+name = "Twitter"
+url = "https://twitter.com/LunaRyuko"
+
+[[links]]
+name = "Steam"
+url = "https://steamcommunity.com/id/LunaRyuko"
+
+[[links]]
+name = "YouTube"
+url = "https://www.youtube.com/channel/UCDhOSQtT97hVPl0b4lnIyjg"

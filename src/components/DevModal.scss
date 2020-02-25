@@ -1,0 +1,170 @@
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background: #0007;
+    position: fixed;
+    top: 0; left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fade-in .5s;
+}
+
+.container-closing {
+    animation: fade-out .3s;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal {
+    background: #000c;
+    width: 700px;
+    height: 400px;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 30px;
+
+    animation: bounce-in .5s;
+}
+
+.modal-closing {
+    animation: bounce-out .3s;
+}
+
+@keyframes bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale(.1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce-out {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(.1);
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 0; right: 0;
+    padding: 5px 15px;
+    border-radius: 0 5px 0 5px;
+    background: var(--primary-color);
+    transition: .25s;
+    user-select: none;
+
+    &:hover {
+        background: var(--primary-color);
+        cursor: pointer;
+    }
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+.modal-text {
+    text-align: left;
+
+    * {
+        margin: 0;
+    }
+
+    h3 {
+        font-weight: 500;
+        color: #fffa;
+        margin: 5px 0 20px 0;
+    }
+}
+
+.bio {
+    p {
+        min-height: 15px;
+    }
+}
+
+.links-container {
+    grid-column: 1/3;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        padding: 0 20px;
+        font-size: 1.3em;
+    }
+    
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: .25s;
+
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 650px)  {
+    .modal {
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+        height: auto;
+        .modal-text {
+            text-align: center;
+        }
+        .links-container {
+            grid-column: 1;
+            ul {
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+        }
+    }
+}

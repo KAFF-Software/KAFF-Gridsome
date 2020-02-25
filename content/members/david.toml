@@ -1,0 +1,17 @@
+name = "David Mason"
+
+nickname = "Nukedrabbit95"
+
+position = "Dev"
+
+img = "david.jpg"
+
+bio = "In addition to helping lead Level Design and fighting weasel uprisings, he also does Programming, Sound Design, Writing, Composing, and whatever else he feels like at the moment."
+
+[[links]]
+name = "Steam"
+url = "https://steamcommunity.com/id/nukedrabbit95/"
+
+[[links]]
+name = "Soundcloud"
+url = "https://soundcloud.com/nukedrabbit95"

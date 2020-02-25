@@ -1,0 +1,22 @@
+{
+  "name": "kaff-gridsome",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-filesystem": "^0.6.2",
+    "animejs": "^3.1.0",
+    "gridsome": "^0.7.0",
+    "gridsome-transformer-toml": "github:emnudge/gridsome-transformer-toml#master",
+    "particles.js": "^2.0.0",
+    "styled-log": "^1.0.3",
+    "vue-scrollto": "^2.17.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2"
+  }
+}

@@ -1,0 +1,17 @@
+name = "Bradley Toliver"
+
+nickname = "Comfort Jones"
+
+position = "Game Design"
+
+img = "jones.jpg"
+
+bio = "As a very real person and not a robot, Comfort eats at regular intervals.<br/> In his free time he enjoys hiking and recreational bath salts.<br/><br/> He's also working on his own mod at [REDACTED]"
+
+[[links]]
+name = "Twitter"
+url = "https://twitter.com/ComfortJonez"
+
+[[links]]
+name = "Mod DB"
+url = "https://twitter.com/ComfortJonez"
