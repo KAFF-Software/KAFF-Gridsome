@@ -179,6 +179,16 @@
 }
 
 @media only screen and (max-width: 850px)  {
+    .news .article-boxes {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+
+        .article-box {
+            transform: rotateY(40deg) scale(.8);
+        }
+    }
+
     .header-section {
         height: 400px;
         .logo-container {
