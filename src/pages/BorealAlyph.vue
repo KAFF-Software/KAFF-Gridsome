@@ -68,6 +68,7 @@ query {
             title
             date
             description
+            link
           }
         }
       }
