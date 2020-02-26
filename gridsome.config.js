@@ -3,6 +3,9 @@ module.exports = {
   siteDescription: 'Indie Games Company',
   siteUrl: 'https://kaffsoftware.com',
   titleTemplate: 'KAFF | %s',
+  configureWebpack: {
+    mode: 'development'
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',

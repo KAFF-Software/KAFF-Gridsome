@@ -2,13 +2,20 @@
   <div class="footer">
     <div class="social-media">
       <g-link v-for="item in icons" :key="item.name" :to="item.link">
-        <img :src="item.icon" :alt="item.name">
+        <img :src="item.icon" :alt="item.name" />
       </g-link>
     </div>
     <div class="credits">
-      <p>Developed by EmNudge.<span class="inline-theme"><Typing overrideWidth="10px" mode="border">Theme</Typing> by Liam Dyer.</span></p>
-      <p class="theme"><Typing overrideWidth="10px" mode="border">Theme</Typing> by Liam Dyer.</p>
-      <p class="email">Email: <i>contact@kaffsoftware.com</i></p>
+      <p class="developers">
+        <span>Developed by EmNudge.</span>
+        <span class="inline-theme">
+          <Typing overrideWidth="10px" mode="border" :thin="true">Theme</Typing>by Liam Dyer.
+        </span>
+      </p>
+      <p class="email">
+        Email:
+        <i>contact@kaffsoftware.com</i>
+      </p>
       <p>Copyright © 2017-2019 | Keep Away From Fire</p>
     </div>
   </div>
@@ -34,10 +41,10 @@ query {
 </static-query>
 
 <script>
-import Typing from '../components/Typing'
+import Typing from "../components/Typing";
 
 export default {
-  name: 'TheFooter',
+  name: "TheFooter",
   components: {
     Typing
   },
@@ -45,16 +52,15 @@ export default {
     icons() {
       return this.$static.allSocialIcon.edges.map(item => {
         const { name, icon, color, link } = item.node.fields.data;
-        
-        return { name, icon: `/icons/social/${icon}`, color, link }
-      })
+
+        return { name, icon: `/icons/social/${icon}`, color, link };
+      });
     }
   }
-}
+};
 </script>
 
 <style scoped lang="scss">
-
 .footer {
   position: relative;
   color: white;
@@ -62,8 +68,8 @@ export default {
   text-align: center;
 
   &:before {
-    content: '';
-    background-image: url('/thin_wave.svg');
+    content: "";
+    background-image: url("/thin_wave.svg");
     background-size: 3000px 62px;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -72,7 +78,7 @@ export default {
     transform: rotate(180deg);
     top: -62px;
     width: 100%;
-    height: 62px
+    height: 62px;
   }
 
   > div {
@@ -84,7 +90,7 @@ export default {
   img {
     height: 60px;
     margin: 5px;
-    transition: .15s;
+    transition: 0.15s;
 
     &:hover {
       filter: brightness(1.1);
@@ -96,34 +102,39 @@ export default {
 .credits {
   margin: 30px 0;
 
-  P { margin: 0; }
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5px;
 
-  .inline-theme {
-    padding-left: 10px;
-    div {
-      margin-right: 5px;
-    }
+  p {
+    margin: 0;
   }
 
-  .theme {
-    display: none;
-    div {
-      margin-right: 5px;
-    }
-  }
+  .developers {
+    margin: 0 auto;
+    max-width: 450px;
 
-  .email {
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      padding: 0 5px;
+    }
   }
 }
 
 @media only screen and (max-width: 500px) {
   .credits {
-    .theme {
-      display: block;
-    }
-    .inline-theme {
-      display: none;
+    display: flex;
+    flex-direction: column;
+    > * { padding-bottom: 5px; }
+    
+    .developers {
+      flex-direction: column;
+      > *:first-child {
+        padding-bottom: 5px;
+      }
     }
   }
 

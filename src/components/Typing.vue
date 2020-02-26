@@ -2,7 +2,11 @@
   <div
     class="typing"
     :class="{typing: true, 'border-type': borderType, 'after-type': !borderType}"
-    :style="{fontSize: size, borderRightWidth: overrideWidth}"
+    :style="{
+      fontSize: size, 
+      borderRightWidth: overrideWidth, 
+      margin: thin ? '' : '10px 0'
+    }"
   >
     <slot></slot>
   </div>
@@ -24,6 +28,7 @@ export default {
       default: '15px'
     },
     size: String,
+    thin: Boolean,
   },
   data() {
     return {
@@ -37,7 +42,6 @@ export default {
   .typing {
     font-weight: 800;
     color: #cf222c;
-    margin: 10px 0;
     display: inline-block;
     letter-spacing: .3em;
   }
