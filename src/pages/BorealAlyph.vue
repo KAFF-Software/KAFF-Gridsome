@@ -50,7 +50,7 @@
     <div class="container join" id="join">
       <div>
         <Typing size="1.5em">Join Us</Typing>
-        <p>Keep Away From Fire is a team of 40 artists, programmers, writers, level designers, voice actors, and more striving to accurately recreate Marc Laidlaw's Epistle 3 story in the Source Engine. Our dedication to advancing the capabilites of the source engine while optimizing our production workflow allows us to efficiently and quickly move through our development cycle. Our organizational methods include an active development-only Discord, biweekly meetings, Phabricator, and GitHub.</p>
+        <p>Keep Away From Fire is a team of {{ teamCount }} artists, programmers, writers, level designers, voice actors, and more striving to accurately recreate Marc Laidlaw's Epistle 3 story in the Source Engine. Our dedication to advancing the capabilites of the source engine while optimizing our production workflow allows us to efficiently and quickly move through our development cycle. Our organizational methods include an active development-only Discord, biweekly meetings, Phabricator, and GitHub.</p>
         <BaseButton href="/apply">Apply To The Team</BaseButton>
       </div>
     </div>
@@ -71,6 +71,14 @@ query {
             link
           }
         }
+      }
+    }
+  }
+
+  generalInfo(path: "/content/general/") {
+    fields {
+      data {
+        teamCount
       }
     }
   }
@@ -120,8 +128,12 @@ export default {
   computed: {
     articles() {
       return this.$static.allArticle.edges.map(item => item.node.fields.data)
+    },
+    teamCount() {
+      const num = this.$static.generalInfo.fields.data.teamCount;
+      return Math.floor(num / 10) * 10;
     }
-  }
+  },
 };
 </script>
 

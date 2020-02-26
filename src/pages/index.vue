@@ -8,7 +8,7 @@
         <h2>Community Driven</h2>
 
         <Typing size="25px">Who we are</Typing>
-        <p>Keep Away From Fire is a team of over 60 artists, programmers, writers, level designers, voice actors, and more with a passion for Source Engine game development.</p>
+        <p>Keep Away From Fire is a team of over {{ teamCount }} artists, programmers, writers, level designers, voice actors, and more with a passion for Source Engine game development.</p>
       </div>
     </ParticleBG>
     <div class="empty-box"></div>
@@ -48,7 +48,7 @@
       <div class="stats">
         <div>
           <img src="/icons/people.svg" alt="people" />
-          <h3>40 Members and Counting</h3>
+          <h3>{{ teamCount }} Members and Counting</h3>
           <p>With talented members from many different creative industries, KAFF is a conglomeration of hard work and pure unadulterated expertise. Harnessing the skillful capabilities of the KAFF team, they strive to create a product not just visually appealing, but filled with enjoyable gameplay elements.</p>
         </div>
         <div>
@@ -84,6 +84,14 @@ query {
             }
           }
         }
+      }
+    }
+  }
+  
+  generalInfo(path: "/content/general/") {
+    fields {
+      data {
+        teamCount
       }
     }
   }
@@ -146,6 +154,10 @@ export default {
       if (this.depLeads.length % 5 == 4 || this.depLeads.length % 5 == 0)
         return "900px";
       return "700px";
+    },
+    teamCount() {
+      const num = this.$static.generalInfo.fields.data.teamCount;
+      return Math.floor(num / 10) * 10;
     }
   },
   methods: {

@@ -31,5 +31,12 @@ module.exports = {
         path: './content/faq/*.toml',
       }
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'GeneralInfo',
+        path: './content/general.toml',
+      }
+    },
   ]
 }
