@@ -16,9 +16,11 @@
       </p>
       <p class="email">
         Email:
-        <i>contact@kaffsoftware.com</i>
+        <a href="mailto:contact@kaffsoftware.com">
+          <i>contact@kaffsoftware.com</i>
+        </a>
       </p>
-      <p>Copyright © 2017-2019 | Keep Away From Fire</p>
+      <p>Copyright © {{ years }} | Keep Away From Fire</p>
     </div>
   </div>
 </template>
@@ -57,6 +59,10 @@ export default {
 
         return { name, icon: `/icons/social/${icon}`, color, link };
       });
+    },
+    years() {
+      const currYear = (new Date).getFullYear()
+      return `2017-${currYear}`
     }
   }
 };
@@ -89,6 +95,10 @@ export default {
   > div {
     padding: 0 20px;
   }
+}
+
+.email a {
+  color: var(--primary-color)
 }
 
 .social-media {
