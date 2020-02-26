@@ -9,7 +9,9 @@
       <p class="developers">
         <span>Developed by EmNudge.</span>
         <span class="inline-theme">
-          <Typing overrideWidth="10px" mode="border" :thin="true">Theme</Typing>by Liam Dyer.
+          <Typing overrideWidth="10px" mode="border" :thin="true">Theme</Typing>
+          <span class="spacer" />
+          by Liam Dyer.
         </span>
       </p>
       <p class="email">
@@ -61,6 +63,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.spacer {
+  margin-right: -5px;
+}
 .footer {
   position: relative;
   color: white;

@@ -88,6 +88,9 @@ import ContainerFAQ from "@/components/ContainerFAQ";
 import LogoBA from "@/components/animations/LogoBA";
 
 export default {
+  metaInfo: {
+    title: 'Boreal Alyph'
+  },
   name: "app",
   components: {
     BaseButton,

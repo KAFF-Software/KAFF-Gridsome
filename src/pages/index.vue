@@ -107,6 +107,9 @@ import DevCard from "@/components/DevCard";
 import LogoKAFF from "@/components/animations/LogoKAFF.vue";
 
 export default {
+  metaInfo: {
+    title: 'Main'
+  },
   name: "app",
   components: {
     TheHeader,
