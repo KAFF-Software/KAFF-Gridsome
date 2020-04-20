@@ -39,7 +39,7 @@
         <Typing size="1.5em">About Boreal Alyph</Typing>
         <p>
           Based on the Marc Laidlaw short story--Epistle 3--Boreal Alyph aims to capture Valve’s lost vision, and bring a fun, satisfying end to the celebrated Half-Life series. Epistle 3 is a synopsis of Half-Life 2: Episode 3, written by ex-Valve writer, Marc Laidlaw (
-          <a href="http://www.marclaidlaw.com/epistle-3/">found here</a>). Since its publication on the the 25th of August, 2017, Half-Life fans at Keep Away From Fire have been working hard to bring Epistle 3 to life in the Source Engine.
+          <a href="http://www.marclaidlaw.com/epistle-3/">found here</a>). Since its publication on the 25th of August, 2017, Half-Life fans at Keep Away From Fire have been working hard to bring Epistle 3 to life in the Source Engine.
         </p>
         <p>We're bringing graphical upgrades with us, alongside brand new, up-to-date assets. Our goal for Boreal Alyph is to create not only an enjoyable series of maps, but an overhaul to many of Source’s out-of-date graphical capabilities, all the while maintaining Half-Life 2’s look and feel.</p>
       </div>
@@ -50,7 +50,7 @@
     <div class="container join" id="join">
       <div>
         <Typing size="1.5em">Join Us</Typing>
-        <p>Keep Away From Fire is a team of {{ teamCount }} artists, programmers, writers, level designers, voice actors, and more striving to accurately recreate Marc Laidlaw's Epistle 3 story in the Source Engine. Our dedication to advancing the capabilites of the source engine while optimizing our production workflow allows us to efficiently and quickly move through our development cycle. Our organizational methods include an active development-only Discord, biweekly meetings, Phabricator, and GitHub.</p>
+        <p>Keep Away From Fire is a team of {{ teamCount }} artists, programmers, writers, level designers, voice actors, and more striving to accurately recreate Marc Laidlaw's Epistle 3 story in the Source Engine. Our dedication to advancing the capabilites of the Source engine while optimizing our production workflow allows us to efficiently and quickly move through our development cycle. Our organizational methods include an active development-only Discord, biweekly meetings, Phabricator, and GitHub.</p>
         <BaseButton href="/apply">Apply To The Team</BaseButton>
       </div>
     </div>
