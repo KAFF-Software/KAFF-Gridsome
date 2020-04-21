@@ -1,0 +1,13 @@
+name = ""
+
+nickname = "The Tax Collector Man"
+
+position = "PR"
+
+img = "tax.jpg"
+
+bio = "Chief patron of the mystical Goblin Zone and on-and-off writer about things only dumb nerds care about. Will probably be at least partially responsible for the next economic recession."
+
+[[links]]
+name = "Twitter"
+url = "https://twitter.com/thetaxgoblin"
