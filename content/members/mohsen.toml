@@ -1,0 +1,21 @@
+name = "Mohsen A."
+
+nickname = "Swaggernaut547"
+
+position = "Lead 3D Artist and Tools Developer"
+
+img = "mohsen.jpg"
+
+bio = "Pushing verts and stroking keys."
+
+[[links]]
+name = "Github"
+url = "https://github.com/MohsenA437"
+
+[[links]]
+name = "Artstation"
+url = "https://www.artstation.com/mohsen-assaqqaf"
+
+[[links]]
+name = "Steam"
+url = "https://steamcommunity.com/id/swankyswaggernaut/"
